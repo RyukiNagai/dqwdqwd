@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブロスタ私的キャラ評価</title>
+    <style>
+        html, body {
+     height: 100%;
+     margin: 0;
+   }
+       body {
+          font-family: Arial, sans-serif;
+          background-color: #ecf6f7;
+          display: flex;
+          flex-direction: column;
+      }
+      header {
+          background-color: #55b7f8;
+          color: white;
+          text-emphasis-color: white;
+          text-align: center;
+          padding: 30px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          font-size:x-large;
+      }
+      footer {
+          text-align: center;
+          background-color: #573d94;
+          padding: 10px;
+          font-size: 0.9em;
+          color: white;
+      }
+      main {
+          font-family: Arial, sans-serif;
+          font-size:larger;
+          background-color: #ecf6f7;
+          padding-top: 150px;
+          flex: 1;
+      }
+       a{
+        text-decoration: none;
+       }
+       #cabeçalho{
+        color: white;
+       }
+       #legenda{
+        color: black;
+       }
+  .card-container{
+    display: inline-flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+  }
+  .card figcaption {
+    text-align: center;
+  }
+  .card img{
+    width: 150px;
+    height: 150px;
+  }
+       h1{
+        padding-left: 50px;
+       }
+       
+       hr{
+        margin-left: 50px;
+       }
+       select{
+        margin-left: 50px;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="ブロスタ私的キャラ評価.html" id="cabeçalho">ブロウラー</a>
+    </header>
+    <main>
+        <h1>ブロウラー</h1>
+        <hr>
+<select id="Filtro" onchange="filtrarCards()">
+  <option value="todos">Todos</option>
+  <option value="Epic">Epic</option>
+  <option value="Super Rare">Super Rare</option>
+  <option value="Mythic">Mythic</option>
+  <option value="Rare">Rare</option>
+</select>
+        <div class="card-container">
+        <a href="グロム.html" id="legenda" ><figure  class="card" data-categoria="Epic"><img src="Grom_Pin-Happy (2).webp"  alt="Grom"><figcaption>グロム</figcaption></figure></a>
+        <a href="Carbonara.html" id="legenda"><figure class="card" data-categoria="Super Rare"><img src="Tick_Pin-Happy.webp"  alt="Tick"><figcaption>ティック</figcaption></figure></a>
+        <a href="Mousse.html" id="legenda"><figure class="card" data-categoria="Mythic"><img src="Mr._P_Pin-Happy (1).webp"  alt="Mr. P"><figcaption>Mr．P</figcaption></figure></a>
+        <a href="グロム.html" id="legenda" data-categoria="Epic"><figure data-categoria="Epic" class="card"><img src="Nani_Pin-Happy.webp"  alt="Nani"><figcaption>ナーニ</figcaption></figure></a>
+        <a href="グロム.html" id="legenda"><figure data-categoria="Super Rare" class="card"><img src="Dynamike_Pin-Happy.webp"  alt="Dynamike"><figcaption>ダイナマイク</figcaption></figure></a>
+        <a href="グロム.html" id="legenda"><figure data-categoria="Mythic" class="card"><img src="Byron_Pin-Happy.webp"  alt="Byron"><figcaption>バイロン</figcaption></figure></a>
+        <a href="グロム.html" id="legenda"><figure data-categoria="Mythic" class="card"><img src="Moe_Pin-Happy.webp"  alt="Moe"><figcaption>モー</figcaption></figure></a>
+        <a href="グロム.html" id="legenda"><figure data-categoria="Rare" class="card"><img src="Brock_Pin-Happy.webp"  alt="Brock"><figcaption>ブロック</figcaption></figure></a>
+        <a href="グロム.html" id="legenda"><figure data-categoria="Rare" class="card"><img src="Barley_Pin-Happy.webp"  alt="Barley"><figcaption>バーリー</figcaption></figure></a>
+        <a href="グロム.html" id="legenda" ><figure data-categoria="Epic" class="card"><img src="Emz_Pin-Happy.webp"  alt="Emz"><figcaption>Emz</figcaption></figure></a>
+        <a href="グロム.html" id="legenda"><figure data-categoria="Mythic" class="card"><img src="Sprout_Pin-Happy.webp"  alt="Sprout"><figcaption>スプラウト</figcaption></figure></a>
+        <a href="グロム.html" id="legenda"><figure data-categoria="Super Rare" class="card"><img src="Carl_Pin-Happy.webp"  alt="Carl"><figcaption>カール</figcaption></figure></a>
+</div>
+<script>
+  function filtrarCards() {
+    const filtro = document.getElementById("Filtro").value;
+    const links = document.querySelectorAll(".card-container a");
+
+    links.forEach(link => {
+      const figure = link.querySelector("figure");
+      const categoria = figure?.getAttribute("data-categoria");
+      link.style.display = (filtro === "todos" || categoria === filtro) ? "" : "none";
+    });
+  }
+</script>
+    </main>
+    <footer>
+        <h1>Copyright © 2025</h1>
+    </footer>
+</body>
+</html>
