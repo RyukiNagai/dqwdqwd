@@ -133,15 +133,25 @@
         width: 30px;
         height: 30px;
       }
-       audio{
+       #yomiage{
         z-index: 1;
         padding-left: 20px;
+       }
+       #play{
+        display: flex;
+  background-color: transparent;
+  cursor: pointer;
        }
     </style>
 </head>
 <body>
     <header>
-        <a href="ブロスタ私的キャラ評価.html" id="cabeçalho">ブロウラー</a>
+<audio id="bgm" autoplay loop src="Iframe Brawl Stars OST _ Season 38 _ New Brawler Kaze _ Menu Music [3yu489udg5o].mp3"></audio>
+      <button id="play" onclick="playbgMusic()">
+        <img class="icon" id="icon1" src="download.png" alt="" width="20" height="20" style="display: inline;">
+        <img class="icon" id="icon2" src="download (1).png" alt="" width="20" height="20" style="display: none;">
+      </button>
+        <a href="index.html" id="cabeçalho">ブロウラー</a>
     </header>
     <main>
         <h1>グロム</h1>
@@ -178,7 +188,7 @@
         <h3>解説</h3>
         <p>グロムは通常攻撃が当てにくいのでその一発一発の価値が上がるXファクターをスターパワーとして推奨します。ガジェットと致しましては、グロムを使う上で監視カメラが役に立つようなブッシュの多いマップで使用するのは避けた方が良いですグロムガジェットを除いたグロム自信の索敵能力とそういったステージでよく用いられるブロウラーを考慮した上で。ギアに関してはシールドは必須であり、燃える不死鳥のような、ブッシュがそこそこあるマップではダメージギアの代わりにビジョンギアを選択すると良いでしょう。</p>
         <hr>
-        <h1>長所<audio controls src="ttsmaker-file-2025-5-28-21-25-37.mp3"></audio></h1>
+        <h1>長所<audio id="yomiage" controls src="ttsmaker-file-2025-5-28-21-25-37.mp3"></audio></h1>
         <ul>
           <li>かなり長い射程</li>
           <li>高い火力</li>
@@ -187,7 +197,7 @@
           <li>当てやすく火力の高いハイパーチャージ</li>
         </ul>
         <hr>
-        <h1>短所<audio controls src="ttsmaker-file-2025-5-28-21-24-36.mp3"></audio></h1>
+        <h1>短所<audio id="yomiage" controls src="ttsmaker-file-2025-5-28-21-24-36.mp3"></audio></h1>
         <ul>
           <li>当てづらい通常攻撃</li>
           <li>低い機動力</li>
@@ -197,17 +207,17 @@
           <li>不利ブロウラーが多い</li>
         </ul>
         <hr>
-        <h1>オススメモード<audio controls src="ttsmaker-file-2025-5-28-21-43-15.mp3"></audio></h1>
+        <h1>オススメモード<audio id="yomiage" controls src="ttsmaker-file-2025-5-28-21-43-15.mp3"></audio></h1>
         <p>グロムはノックアウトや賞金稼ぎのようなキルを主体としたモードが得意です。投げであることと超リーチに対する火力の高さで壁があり長射程が強いとされるマップで使うことを推奨します。強奪は編成によっては選べなくもないですが格別強いわけではないので積極的に使う必要はないです。盤面をキープしたり押し上げる能力に乏しいのでブロストライカー、エメラルドハント、ホットゾーンといったモードでは使わないようにしましょう。ソロモードでの使用も避けた方が良いです。</p>
         <hr>
-        <h1>有利ブロウラー<audio controls src="ttsmaker-file-2025-5-28-21-27-20.mp3"></audio></h1>
+        <h1>有利ブロウラー<audio id="yomiage" controls src="ttsmaker-file-2025-5-28-21-27-20.mp3"></audio></h1>
         <ul>
           <li>ナーニ、マンディ、ブロックを除いた長射程</li>
           <li>ティック、ジュジュを除いた投げ</li>
           <li>機動力の低い中距離(ニタ、ジェシーなど)</li>
         </ul>
         <hr>
-        <h1>不利ブロウラー<audio controls src="ttsmaker-file-2025-5-28-21-29-39.mp3"></audio></h1>
+        <h1>不利ブロウラー<audio id="yomiage" controls src="ttsmaker-file-2025-5-28-21-29-39.mp3"></audio></h1>
         <ul>
           <li>アサシン全般</li>
           <li>ティック</li>
@@ -215,10 +225,10 @@
           <li>機動力の高いタンク(ビビ、オーリーなど)</li>
         </ul>
         <hr>
-        <h1>使い方<audio controls src="ttsmaker-file-2025-5-28-21-30-45.mp3"></audio></h1>
+        <h1>使い方<audio id="yomiage" controls src="ttsmaker-file-2025-5-28-21-30-45.mp3"></audio></h1>
         <p>グロム持ち前の射程を最大に生かした間合いを十二分にとった戦い方をすると良いでしょう。決して相手を近づけずスターパワーで火力の上がった通常攻撃の先端を当てることを意識付けましょう。ガジェットは不意打ちやウルトを撃った直後に使用するとリターンを得やすいです。通常攻撃はなるべく二回同時に撃つと当てやすいです。</p>
         <hr>
-        <h1>キャラランク<audio controls src="ttsmaker-file-2025-5-28-21-31-46.mp3"></audio></h1>
+        <h1>キャラランク<audio id="yomiage" controls src="ttsmaker-file-2025-5-28-21-31-46.mp3"></audio></h1>
     <table border="1">
         <tr>
             <th>S</th>
@@ -249,6 +259,22 @@
         </tr>
     </table>
         <hr>
+    <script>
+  function playbgMusic(){
+    const audio = document.getElementById("bgm");
+    const icon1 = document.getElementById("icon1");
+    const icon2 = document.getElementById("icon2");
+    if (audio.paused) {
+    audio.play();
+    icon2.style.display = "inline";
+    icon1.style.display = "none";
+  } else {
+    audio.pause();
+    icon1.style.display = "inline";
+    icon2.style.display = "none";
+  }
+}
+</script>
     </main>
     <footer>
         <h1>Copyright © 2025</h1>
